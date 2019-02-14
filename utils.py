@@ -2,8 +2,7 @@
 # Math library
 # Author: Sébastien Combéfis
 # Version: February 8, 2018
-import scipy.integrate as integrate
-import scipy.special as special
+
 
 def fact(n):
 	"""Computes the factorial of a natural number.
@@ -38,8 +37,6 @@ def roots(a, b, c):
 
 
 def integrate(function, lower, upper):
-	a= scipy.eval(fucntion)
-	print(a)
 	"""Approximates the integral of a fonction between two bounds
 	
 	Pre: 'function' is a valid Python expression with x as a variable,
