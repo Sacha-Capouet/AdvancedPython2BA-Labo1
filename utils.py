@@ -10,7 +10,14 @@ def fact(n):
 	Post: Returns the factorial of 'n'.
 	Throws: ValueError if n < 0
 	"""
-	pass
+	results=1
+	if n<0:
+		raise ValueError()
+	else:
+
+		for x in range(n):
+			results = results * (x+1)
+		return results
 
 def roots(a, b, c):
 	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
@@ -19,7 +26,14 @@ def roots(a, b, c):
 	Post: Returns a tuple with zero, one or two elements corresponding
 		to the roots of the ax^2 + bx + c polynomial.
 	"""
-	pass
+	o = b**2 - 4*a*c 
+	p = (-b + o**(0.5))/2*a
+	q = (-b - o**(0.5))/2*a
+	if p==q:
+		return(p,)
+	else:
+		return (p,q)
+
 
 def integrate(function, lower, upper):
 	"""Approximates the integral of a fonction between two bounds
@@ -37,6 +51,6 @@ def integrate(function, lower, upper):
 	pass
 
 if __name__ == '__main__':
-	print(fact(5))
-	print(roots(1, 0, 1))
-	print(integrate('x ** 2 - 1', -1, 1))
+	print(fact(1))
+	print(roots(2, -3,9/8))
+	# print(integrate('x ** 2 - 1', -1, 1))
