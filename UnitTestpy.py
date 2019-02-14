@@ -19,3 +19,5 @@ class Test ( unittest . TestCase ):
 suite = unittest . TestLoader () . loadTestsFromTestCase ( Test )
 runner = unittest . TextTestRunner ()
 print ( runner . run( suite ))
+
+
